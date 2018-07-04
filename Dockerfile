@@ -1,4 +1,4 @@
-FROM	ubuntu:16.04
+FROM	ubuntu:latest
 MAINTAINER	Eugene <1@1.net>
 
 ARG home=/
