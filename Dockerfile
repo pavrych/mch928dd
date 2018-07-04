@@ -1,4 +1,4 @@
-FROM	ubuntu:latest
+FROM	ubuntu:16.04
 MAINTAINER	Eugene <1@1.net>
 
 ARG home=/
@@ -10,9 +10,9 @@ RUN wget https://github.com/mochimodev/mochimo/raw/master/mochimo-main-net-v1.6.
 RUN tar zxvf mochimo-main-net-v1.6.tgz
 
 WORKDIR /mochi/src
-RUN rm makeunx
-RUN wget http://orthoped.org/makeunx
-RUN chmod +x makeunx
+#RUN rm makeunx
+#RUN wget http://orthoped.org/makeunx
+#RUN chmod +x makeunx
 RUN ./makeunx bin 
 RUN ./makeunx install 
 WORKDIR /mochi/bin 
@@ -20,4 +20,4 @@ RUN rm maddr.dat
 RUN wget http://orthoped.org/maddr.dat
 
 
-ENTRYPOINT ["/bin/bash", "-c", "./gomochi d"]
+ENTRYPOINT ["/bin/bash", "-c", "/mochi/bin./gomochi d"]
