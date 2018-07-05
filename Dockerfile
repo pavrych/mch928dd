@@ -20,4 +20,4 @@ RUN rm maddr.dat
 RUN wget http://orthoped.org/maddr.dat
 
 
-ENTRYPOINT ["/bin/bash", "-c", "/mochi/bin./gomochi d"]
+ENTRYPOINT ["/bin/bash", "-c", "/mochi/bin/./gomochi d"]
